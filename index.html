@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <title>Frontend Mentor | Weather app</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">
+      <img src="./assets/images/logo.svg" alt="logo">
+    </div>
+    <div class="dropdown" id="dropdown">
+      <div class="dropdown-header">
+        <img src="./assets/images/icon-units.svg" alt="unit"> Units <img src="./assets/images/icon-dropdown.svg" alt="dropdown">
+      </div>
+      <div class="dropdown-down">
+        <div id="imperial" class="select option">
+        Switch to Imperial
+        </div>
+        <hr>
+        <div class="select">
+        <span>Temperature :</span>
+          <div id="tempt" value="0" class="selected option">
+            Celsius (°C) <img src ="./assets/images/tick.png">
+          </div>
+          <div id="tempt" value="1" class="option">
+            Fahrenheit (°F) <img src ="./assets/images/tick.png">
+          </div>
+        </div>
+        <hr>
+        <div class="select">
+          <span>Wind Speed :</span>
+           <div id="wind" value="0" class="selected option">
+            km/h <img src ="./assets/images/tick.png">
+          </div>
+            <div id="wind" value="1" class="option">
+            mph <img src ="./assets/images/tick.png">
+          </div>
+       </div>
+       <hr>
+        <div class="select">
+          <span>Precipitation :</span>
+            <div id="prep" value="0" class="selected option">
+            Millimeters (mm) <img src ="./assets/images/tick.png">
+          </div>
+            <div id="prep" value="1" class="option">
+            Inches (in) <img src ="./assets/images/tick.png">
+          </div>
+        </div>
+      </div>
+  </nav>
+
+  <main class="container">
+    <h1>How's the sky looking today?</h1>
+    <div class="city-search" style="position : relative">
+    <div class="search-bar">
+    <input type="search" id="search" placeholder="Search for a Place...." autocomplete="off"/>
+      <button>Search</button>
+    </div>
+    <div class="city-list hide">
+    </div>
+  </div>
+    <div class="weather-section">
+      <div class="left">
+        <div class="main-card">
+        </div>
+
+        <div class="stats">
+          <div class="card"><span>Feels Like</span><p></p></div>
+          <div class="card"><span>Humidity</span><p></p></div>
+          <div class="card"><span>Wind</span><p></p></div>
+          <div class="card"><span>Precipitation</span><p></p></div>
+        </div>
+
+        <div class="daily">
+          <h3>Daily forecast</h3>
+          <div class="days">
+            <div class="day"></div>
+            <div class="day"></div>
+            <div class="day"></div>
+            <div class="day"></div>
+            <div class="day"></div>
+            <div class="day"></div>
+            <div class="day"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="right">
+        <div class="hourly-header">
+          <h4>Hourly forecast</h4>
+          <select>
+          </select>
+        </div>
+
+        <div class="hourly">
+        <div class="hour"></div>
+        <div class="hour"></div>
+        <div class="hour"></div>
+        <div class="hour"></div>
+        <div class="hour"></div>
+        <div class="hour"></div>
+        <div class="hour"></div>
+        <div class="hour"></div>
+        <div class="hour"></div>
+        <div class="hour"></div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
